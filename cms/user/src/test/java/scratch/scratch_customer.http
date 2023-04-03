@@ -1,0 +1,51 @@
+### 회원가입(고객)
+POST http://localhost:8081/signup/customer
+Content-Type: application/json
+
+{
+  "birth": "2023-03-31",
+  "email": "tekhanst@gmail.com",
+  "name": "string",
+  "password": "string",
+  "phone": "string"
+}
+
+<> 2023-03-30T023657.200.txt
+
+### 이메일 인증(고객)
+GET http://localhost:8081/signup/customer/verify?email=tekhanst@gmail.com&code=pQWbEHPMMF
+
+<> 2023-03-30T023736.200.txt
+
+### 로그인(고객)
+POST http://localhost:8081/signin/customer
+Content-Type: application/json
+
+{
+  "email": "tekhanst@gmail.com",
+  "password": "string"
+}
+
+<> 2023-03-30T023920.200.txt
+<> 2023-03-30T023802.200.txt
+
+### 회원 정보 조회(고객)
+GET http://localhost:8081/customer/getinfo
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQK0Zib0ordDMwUWRBVHg3ZkFJZlBZbEE5aFdPSEhNRGEzejRVQ2ZYUzZvPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODAzMjg3MTcsImV4cCI6MTY4MDQxNTExN30.xc3YPDK6zEJOEzr6GgFOy2bUsR1GOf9qI_ZzP_9r7ck
+
+<> 2023-03-30T024050.200.json
+
+
+### 잔액 변경(고객)
+POST http://localhost:8081/customer/balance
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQK0Zib0ordDMwUWRBVHg3ZkFJZlBZbEE5aFdPSEhNRGEzejRVQ2ZYUzZvPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODAzMjg3MTcsImV4cCI6MTY4MDQxNTExN30.xc3YPDK6zEJOEzr6GgFOy2bUsR1GOf9qI_ZzP_9r7ck
+Content-Type: application/json
+
+{
+  "from": "tekhanst@gmail.com",
+  "message": "string",
+  "money": 100000
+}
+
+
+

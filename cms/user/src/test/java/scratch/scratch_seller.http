@@ -1,0 +1,44 @@
+### 회원가입(판매자)
+POST http://localhost:8081/signup/seller
+Content-Type: application/json
+
+{
+  "birth": "2023-03-30",
+  "email": "ekhanst@gmail.com",
+  "name": "string",
+  "password": "string",
+  "phone": "string"
+}
+
+<> 2023-03-30T024557.200.txt
+<> 2023-03-30T024545.400.json
+<> 2023-03-30T024415.200.txt
+
+### 이메일 인증(판매자)
+GET http://localhost:8081/signup/seller/verify?email=ekhanst@gmail.com&code=s8u4ploNkC
+
+<> 2023-03-30T024617.200.txt
+<> 2023-03-30T024444.400.json
+<> 2023-03-30T024437.200.txt
+
+### 로그인(판매자)
+POST http://localhost:8081/signin/seller
+Content-Type: application/json
+
+{
+  "email": "ekhanst@gmail.com",
+  "password": "string"
+}
+
+<> 2023-03-30T024643.200.txt
+<> 2023-03-30T024623.200.txt
+<> 2023-03-30T024453.200.txt
+
+### 회원 정보 조회(판매자)
+GET http://localhost:8081/seller/getinfo
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzWjM5RDd3RUU1Vm9IdTRWeFkwYXFxdUx2bmJJNzNGQjh1UFliZjN0STg0PSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwMzI2MjM3LCJleHAiOjE2ODA0MTI2Mzd9._RW0y7F7Ygo7jJZLiDoDwRfMKzBUz4nC3923Mug2ZKk
+
+<> 2023-03-30T024659.200.json
+<> 2023-03-30T024631.200.json
+<> 2023-03-30T024516.200.json
+<> 2023-03-30T024458.200.json
